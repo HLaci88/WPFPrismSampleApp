@@ -1,4 +1,6 @@
-﻿using Prism.Ioc;
+﻿using Content;
+using Prism.Ioc;
+using Prism.Modularity;
 using System.Windows;
 using WPFPrismApp.Dialogs;
 using WPFPrismApp.Views;
@@ -18,6 +20,11 @@ namespace WPFPrismApp
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             containerRegistry.RegisterDialog<ContactsDialog, ContactsDialogViewModel>();
+        }
+
+        protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
+        {
+            moduleCatalog.AddModule<ContentModule>();
         }
     }
 }

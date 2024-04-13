@@ -7,4 +7,8 @@
   <ItemGroup>
     <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Content\Content.csproj" />
+    <ProjectReference Include="..\Core\Core.csproj" />
+  </ItemGroup>
 </Project>
