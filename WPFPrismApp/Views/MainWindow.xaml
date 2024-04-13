@@ -34,8 +34,10 @@
 
         <StackPanel  Grid.ColumnSpan="2" Orientation="Horizontal">
             <Button>Kép Megnyitása</Button>
-            <Button>Névjegy</Button>
+            <Button Command="{Binding ContactsClicked}">Névjegy</Button>
         </StackPanel>
 
+        <ContentControl Grid.Row="1" Grid.Column="0" prism:RegionManager.RegionName="left_side" />
+        <ContentControl Grid.Row="1" Grid.Column="1" prism:RegionManager.RegionName="right_side" />
     </Grid>
 </Window>
