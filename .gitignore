@@ -5,3 +5,7 @@
 /.vs
 /WPFPrismApp/bin/Debug/net6.0-windows
 /WPFPrismApp/obj
+/Content/bin/Debug/net6.0-windows
+/Content/obj
+/Core/bin/Debug/net6.0-windows
+/Core/obj

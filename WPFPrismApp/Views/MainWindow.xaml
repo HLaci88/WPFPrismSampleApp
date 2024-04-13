@@ -4,7 +4,42 @@
         xmlns:prism="http://prismlibrary.com/"
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}" Height="350" Width="525" >
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Style.Resources>
+            <Setter Property="Width" Value="120" />
+            <Setter Property="Height" Value="36" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Background" Value="Green" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Padding" Value="6" />
+            <Setter Property="Margin" Value="4" />
+        </Style>
+    </Window.Resources>
+    
     <Grid>
-        <ContentControl prism:RegionManager.RegionName="ContentRegion" />
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="7*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60px"/>
+            <RowDefinition/>
+            <RowDefinition Height="50px"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel  Grid.ColumnSpan="2" Orientation="Horizontal">
+            <Button Command="{Binding OpenPictureClicked}">Kép Megnyitása</Button>
+            <Button Command="{Binding ContactsClicked}">Névjegy</Button>
+        </StackPanel>
+
+        <ContentControl Grid.Row="1" Grid.Column="0" prism:RegionManager.RegionName="left_side" />
+        <ContentControl Grid.Row="1" Grid.Column="1" prism:RegionManager.RegionName="right_side" />
+        <TextBlock Grid.Row="2" Grid.ColumnSpan="2" VerticalAlignment="Center" Margin="8" Text="{Binding FilePath}" />
+
     </Grid>
 </Window>
