@@ -4,7 +4,7 @@ namespace WPFPrismApp.ViewModels
 {
     public class MainWindowViewModel : BindableBase
     {
-        private string _title = "Prism Application";
+        private string _title = "WPF teszt feladat";
         public string Title
         {
             get { return _title; }
